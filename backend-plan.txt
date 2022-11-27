@@ -1,0 +1,1 @@
+index.js- central server file for accessing all the requests from the client
