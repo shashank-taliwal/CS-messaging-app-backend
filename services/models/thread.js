@@ -18,9 +18,9 @@ const threadSchema = new mongoose.Schema({
     required: true,
   },
   assignedTo: {
-    type: Number,
+    type: String,
     required: false,
-    default: 0,
+    default: null,
   },
   isResolved: {
     type: Boolean,
@@ -30,12 +30,17 @@ const threadSchema = new mongoose.Schema({
   inProgress: {
     type: Boolean,
     required: true,
-    default: true,
+    default: false,
+  },
+  inQueue:{
+    type:Boolean,
+    required:true,
+    default:true,
   },
   conversation: [
     {
       message:String,
-      Id:Number
+      isUser:Boolean,
     },
   ],
 });
